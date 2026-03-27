@@ -142,7 +142,7 @@ class Employee extends Component {
       TerminateDate: event.target[15].value,
     };
     axios
-      .post("http://localhost:4000/api/employee", body, {
+      .post("/api/employee", body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
         }
@@ -196,7 +196,7 @@ class Employee extends Component {
     console.log("update", body);
     axios
       .put(
-        "http://localhost:4000/api/employee/" + info["_id"],
+        "/api/employee/" + info["_id"],
         body, {
         headers: {
           authorization: localStorage.getItem("token") || ""
